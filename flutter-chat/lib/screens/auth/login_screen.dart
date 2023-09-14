@@ -65,7 +65,7 @@ class _HomeScreenState extends State<LoginScreen> {
       return await APIs.auth.signInWithCredential(credential);
     } catch (e) {
       log('\n_signInWithGoogle: $e');
-      // ignore: use_build_context_synchronously
+      if (!mounted) return null;
       Dialogs.showSnackbar(context, '오류발생');
       return null;
     }
