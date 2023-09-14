@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'dart:io';
 
 import 'package:chat/api/apis.dart';
@@ -22,6 +21,7 @@ class _HomeScreenState extends State<LoginScreen> {
   @override
   void initState() {
     super.initState();
+    // auto triggering animation
     Future.delayed(const Duration(milliseconds: 500), () {
       setState(() {
         _isAnimate = true;
@@ -29,18 +29,29 @@ class _HomeScreenState extends State<LoginScreen> {
     });
   }
 
+  // handles google login button click
   _handleGoogleBtnClick() {
+    // showing progress bar
     Dialogs.showProgressBar(context);
 
-    _signInWithGoogle().then((user) {
+    _signInWithGoogle().then((user) async {
+      // hiding progress bar
       Navigator.pop(context);
-      if (user != null) {
-        log('\nUser : ${user.user}', name: 'GoogleSignIn');
-        log('\nUserAdditionalInfo: ${user.additionalUserInfo}',
-            name: 'GoogleSignIn');
 
-        Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (_) => const HomeScreen()));
+      if (user != null) {
+        debugPrint('\nUser : ${user.user}');
+        debugPrint('\nUserAdditionalInfo: ${user.additionalUserInfo}');
+
+        if ((await APIs.userExits())) {
+          if (!mounted) return;
+          Navigator.pushReplacement(
+              context, MaterialPageRoute(builder: (_) => const HomeScreen()));
+        } else {
+          await APIs.createUser().then((value) {
+            Navigator.pushReplacement(
+                context, MaterialPageRoute(builder: (_) => const HomeScreen()));
+          });
+        }
       }
     });
   }
@@ -64,7 +75,7 @@ class _HomeScreenState extends State<LoginScreen> {
       // Once signed in, return the UserCredential
       return await APIs.auth.signInWithCredential(credential);
     } catch (e) {
-      log('\n_signInWithGoogle: $e');
+      debugPrint('\n_signInWithGoogle: $e');
       if (!mounted) return null;
       Dialogs.showSnackbar(context, '오류발생');
       return null;

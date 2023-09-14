@@ -1,11 +1,7 @@
-import 'dart:convert';
-import 'dart:math';
-
 import 'package:chat/api/apis.dart';
 import 'package:chat/main.dart';
 import 'package:chat/models/chat_user.dart';
 import 'package:chat/widgets/chat_user_card.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
