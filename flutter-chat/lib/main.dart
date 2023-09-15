@@ -1,4 +1,4 @@
-import 'package:chat/screens/auth/splash_screen.dart';
+import 'package:chat/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:firebase_core/firebase_core.dart';

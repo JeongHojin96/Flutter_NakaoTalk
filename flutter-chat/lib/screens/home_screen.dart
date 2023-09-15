@@ -1,6 +1,7 @@
 import 'package:chat/api/apis.dart';
 import 'package:chat/main.dart';
 import 'package:chat/models/chat_user.dart';
+import 'package:chat/screens/profile_screen.dart';
 import 'package:chat/widgets/chat_user_card.dart';
 import 'package:flutter/material.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -22,13 +23,18 @@ class _HomeScreenState extends State<HomeScreen> {
         leading: const Icon(Icons.home, size: 32),
         title: const Text("NakaoTalk"),
         actions: [
-          // 유저검색 버튼
+          // 돋보기 버튼
           IconButton(
               onPressed: () {}, icon: const Icon(Icons.search), iconSize: 30),
-          // 더보기 버튼
+          // 톱니바퀴 버튼
           IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.more_vert),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (_) => ProfileScreen(user: list[0])));
+              },
+              icon: const Icon(Icons.settings),
               iconSize: 30),
         ],
       ),

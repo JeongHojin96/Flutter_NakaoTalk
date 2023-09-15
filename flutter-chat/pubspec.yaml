@@ -24,6 +24,8 @@ dependencies:
 
   flutter_launcher_icons: "^0.13.1"
 
+  cached_network_image: ^3.2.3
+
 flutter_launcher_icons:
   android: "ic_launcher"
   ios: true
