@@ -1,59 +1,78 @@
-name: chat
+name: we_chat
 description: A new Flutter project.
 
-publish_to: "none"
+publish_to: 'none'
 
 version: 1.0.0+1
 
 environment:
-  sdk: ">=3.1.0 <4.0.0"
+  sdk: '>=2.18.4 <3.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
 
+
+  # For using cupertino icons
   cupertino_icons: ^1.0.2
+  
+  # For integrating firebase
+  firebase_core: ^2.2.0
 
-  firebase_core: ^2.15.1
+  # For handling firebase authentication
+  firebase_auth: ^4.1.3
 
-  firebase_auth: ^4.9.0
+  # For handling google sign in
+  google_sign_in: ^5.4.2
 
-  google_sign_in: ^6.1.5
+  # For accessing cloud firestore database
+  cloud_firestore: ^4.1.0
 
-  cloud_firestore: ^4.9.1
-
-  flutter_launcher_icons: "^0.13.1"
-
+  # For showing network images
   cached_network_image: ^3.2.3
 
-flutter_launcher_icons:
-  android: "ic_launcher"
-  ios: true
-  image_path: "images/icon.png"
-  min_sdk_android: 21 # android min sdk min:16, default 21
-  web:
-    generate: true
-    image_path: "path/to/image.png"
-    background_color: "#hexcode"
-    theme_color: "#hexcode"
-  windows:
-    generate: true
-    image_path: "path/to/image.png"
-    icon_size: 48 # min:48, max:256, default: 48
-  macos:
-    generate: true
-    image_path: "path/to/image.png"
+  # For picking images
+  image_picker: ^0.8.6
+
+  # For accessing Firebase Storage (for uploading files)
+  firebase_storage: ^11.0.6
+
+  # For showing Emojis
+  emoji_picker_flutter: ^1.5.1
+
+  # For accessing firebase messaging (Push Notification)
+  firebase_messaging: ^14.2.0
+
+  # For calling RestAPIs
+  http: ^0.13.5
+
+  # For creating notification channel
+  flutter_notification_channel: ^2.0.0
+
+  # For storing images into gallery
+  gallery_saver: ^2.3.2
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
+#   flutter_launcher_icons: "^0.10.0"
+
+# flutter_icons:
+#   android: "ic_launcher"
+#   ios: true
+#   image_path: "images/icon.png"
+#   min_sdk_android: 21
+#   remove_alpha_ios: true
+  
+
+  # For recommended coding practices
   flutter_lints: ^2.0.0
 
 flutter:
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
+
+  # For enabling material design
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:

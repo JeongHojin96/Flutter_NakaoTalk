@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>924318149939-v7qpe32na2upu9425r1slnkmrlbj0n62.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.924318149939-v7qpe32na2upu9425r1slnkmrlbj0n62</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>924318149939-gsm0ivvhvs1g1i1fuk7fqd8m2epa3i8f.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC8FKe_5e6KECOHqsqAoQbP1-XEPDcDtVo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>924318149939</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.callor.hello</string>
+	<key>PROJECT_ID</key>
+	<string>nakaotalk-6cdd2</string>
+	<key>STORAGE_BUCKET</key>
+	<string>nakaotalk-6cdd2.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:924318149939:ios:0bb7e0fe2829b97822e246</string>
+</dict>
+</plist>
